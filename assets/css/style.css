@@ -1,0 +1,242 @@
+/* ===============common================== */
+:root{
+    --green: #058e60;
+    --gray: #3f3d56;
+    --smooth: all .3s ease-in;
+}
+html{
+    font-size: 10px;
+    font-family: "roboto";
+}
+.container{
+    width: 117rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+a:active{
+    color: #000;
+}
+a{
+    color: #000;
+}
+/* ===============header================ */
+nav{
+    background-color: #058e60;
+}
+
+header .logo img{
+    height: 4rem;
+   
+}
+nav{
+    position: relative;
+}
+nav{
+    display: flex;
+    padding-bottom: 1rem;
+}
+nav .container .top_of_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+header{
+    position: sticky;
+    top: 0;
+}
+header{
+    height: auto;
+    width: 100%;
+}
+.login{
+    display: none;
+
+}
+nav .container .top_of_header .search input{
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 10px 0 0 10px;
+    border: 1px;
+    font-size: 1.6rem;
+}
+nav .search{
+    width: 60%;
+    display: flex;
+  display: none;
+}
+nav .search button{
+    height: 2.7rem;
+    border-radius: 0 10px 10px 0;
+    border: 1px;
+    background-color: orange;
+}
+nav .logo{
+    align-self: flex-start;
+}
+
+nav .cart_hover{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+    display: none;
+}
+.bot_of_header ul,li,a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+}
+.bot_of_header .list_bot_of_header{
+    display: flex;
+    margin-left: 1rem;
+    flex-wrap: wrap;
+}
+.bot_of_header li{
+    padding: 1rem;
+    
+}
+.bot_menu{
+    background-color: #393a44;
+}
+.navbar_link:hover{
+    background-color: var(--green);
+    transition: var(--smooth);
+}
+
+/* ============menu button=================== */
+
+.navbar_link{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+.navbar_links{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: var(--gray);
+    z-index: 5;
+    transition: var(--smooth);
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.navbar_links.navbar_open{
+    transform: translateX(0);
+    opacity: 1;
+    transition: var(--smooth);
+}
+.menu_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    cursor: pointer;
+    transition: var(--smooth);
+    z-index: 6;
+    position: fixed;
+    top: 30px;
+    right: 5px;
+}
+.menu_icon{
+    width: 45px;
+    height: 6px;
+    background-color: var(--gray);
+    border-radius: 5px;
+    transition: var(--smooth);
+    position: relative;
+}
+.menu_icon::before,.menu_icon::after{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 6px;
+    background-color: var(--gray);
+    border-radius: 5px;
+    transition: var(--smooth);
+}
+.menu_icon::before{
+    transform: translateY(-12px);
+}
+.menu_icon::after{
+    transform: translateY(12px);
+}
+
+/* button animation */
+
+.open .menu_icon{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.open .menu_icon::before{
+    transform: rotate(45deg) translate(35px,-35px);
+}
+.open .menu_icon::after{
+    transform: rotate(-45deg) translate(35px,35px);
+}
+/* ====================== header and menu */
+
+@media(min-width:992px){
+    nav .logo img{
+        width: 200px;
+        height: 60px;
+    }
+    
+    nav .cart_hover{
+        display: block;
+    }
+    nav .cart_group{
+        position: fixed;
+        top: 20px;
+        right: 23%;
+    }
+    nav .top_of_header .search button{
+        position: fixed;
+        cursor: pointer;
+        width: 50px;
+    }
+    nav .search{
+        position: fixed;
+        width: 40%;
+        display: block;
+    }
+    .login{
+        display: inline;
+        position: fixed;
+        top: 23px;
+        right: 16%;
+    }
+    .menu_icons{
+        right: 10%;
+    }
+    #login{
+        display: none;
+    }
+    #cart{
+        display: none;
+    }
+    .navbar_links{
+        background-color: #fff;
+        width: 20%;
+        left: 12%;
+        transform: translateY(-100%);
+        height: 60%;
+        top:120px;
+    }
+    #first_child_menu{
+        border-radius: 10px 10px 0 0;
+    }
+    #last_child_menu{
+        border-radius: 0 0 10px 10px;
+    }
+    .navbar_link{
+        border: 1px solid #b9b2b2;
+        border-radius: 0;
+    }
+    .navbar_link {
+        color: #000;
+    }
+}
