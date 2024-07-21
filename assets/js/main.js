@@ -16,17 +16,17 @@ menuButton.addEventListener('click', ()=>{
   menuButton.classList.toggle("open")
 })
 window.addEventListener('scroll',()=>{
-  if(window.screenY>200){
-    menuButton.classList.add('visible')
+  if(window.screenY<200){
+    menuButton.classList.add('hidden')
   }
   else{
-    menuButton.classList.remove('visible')
+    menuButton.classList.remove('hidden')
   }
 })
 
 //header
 const header = document.querySelector('.header')
-const offSet = 250
+const offSet = 150
 window.addEventListener('scroll',()=>{
   if(window.scrollY>offSet){
     header.classList.add('fixed')
@@ -50,4 +50,6 @@ const handleChangeSlide = ()=>{
 setInterval(
  handleChangeSlide
 ,3000)
+
+
 
