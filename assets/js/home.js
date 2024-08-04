@@ -1,4 +1,4 @@
-const input = document.querySelector('#search'); 
+const input = document.getElementById('search')
 const overlay = document.querySelector('.overlay'); 
 input.addEventListener('click', () => {
   overlay.style.display = 'block'; // Hiện overlay
@@ -15,26 +15,30 @@ menuButton.addEventListener('click', ()=>{
   menu.classList.toggle("navbar_open")
   menuButton.classList.toggle("open")
 })
-window.addEventListener('scroll',()=>{
-  if(window.screenY<200){
-    menuButton.classList.add('hidden')
-  }
-  else{
-    menuButton.classList.remove('hidden')
-  }
-})
+
 
 //header
 const header = document.querySelector('.header')
-const offSet = 150
+const offSet = 350
+if(window.scrollY==0&&window.innerWidth>992)menuButton.style.display='none'
 window.addEventListener('scroll',()=>{
   if(window.scrollY>offSet){
     header.classList.add('fixed')
+    menuButton.style.display = 'block'
   }
   else{
     header.classList.remove('fixed')
+    menuButton.style.display = 'none'
   }
 })
+
+
+
+
+
+
+
+
 
 // list images slide
 const listImages = document.querySelector('.list_images')
