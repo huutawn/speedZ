@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --green: #058e60;
+        --gray: #3f3d56;
+        --smooth: all .3s ease-in;
+        --border: #c6bdbdc9;
+    }
+    html{
+        font-size: 10px;
+        font-family: "roboto",sans-serif;
+        scroll-behavior: smooth;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a.active{
+        color: black;
+    }
+    .container{
+        max-width: 1170px;
+       
+        margin: 0 auto;
+    }
+    header{
+        
+        height: 435px;
+        z-index: -2;
+    }
+    .head{
+        height: 1550px;
+        width: 100%;
+    }
+   header .background{
+        background-color: #0A814B;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 435px;
+    }
+   header .background-image{
+        width: 100%;
+        height: 550px;
+        background-image: url("https://w.ladicdn.com/s2250x900/619db9b6e23b1b0039e64fd1/asset-39-20230505072528-agkoi.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 60px;  
+      
+    }
+    header .head .logo{
+        background-image: url("https://w.ladicdn.com/s650x400/619db9b6e23b1b0039e64fd1/asset-7-20230504023459-yiamh.png");
+        width: 315px;
+        height: 60px;
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 350px;
+        top: 50px;
+    }
+    .head .text{
+        width: 560px;
+        height: 200px;
+        font-size: 80px;
+        position: absolute;
+        color: #fff;
+        left: 200px;
+        top: 150px;
+
+    }
+  
+    .hero{
+        background-color: #eaf2fe;
+        padding: 30px 0;
+    }
+    .list-info{
+        display: flex;
+        justify-content: space-between;
+    }
+    .info{
+        width: 360px;
+        height: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border-radius: 8px;
+    }
+    .info-title{
+        font-size: 2.5rem;
+        position: absolute;
+        bottom: 90px;
+        left: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .info-text{
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 30px;
+        left: 5px;
+        text-align: center;
+    }
+    .info .line{
+        width: 100px;
+        height: 5px;
+        background-color: #0A814B;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 75px;
+        left: 130px;
+    }
+    .info:hover{
+        padding: 5px;
+        transition: 0.3s ease-in-out;
+    }
+    .background-image.ttck{
+        background-image: url("https://w.ladicdn.com/s700x600/619db9b6e23b1b0039e64fd1/asset-10-20230504025510-1wyx_.png");
+        width: 360px;
+        height: 270px;
+        background-repeat: no-repeat;
+    }
+    .background-image.ttnh{
+        background-image: url("https://w.ladicdn.com/s700x600/619db9b6e23b1b0039e64fd1/asset-11-20230504032742-d1hef.png");
+        width: 360px;
+        height: 270px;
+        background-repeat: no-repeat;
+    }
+    .background-image.tttg{
+        width: 360px;
+        height: 270px;
+        background-repeat: no-repeat;
+        background-image: url("https://w.ladicdn.com/s700x600/619db9b6e23b1b0039e64fd1/asset-12-20230504032742-qah4t.png");
+    }
+    .payment{
+        padding: 30px 0;
+    }
+    .payment-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    .payment-item img{
+        width: 480px;
+        height: 480px;
+    }
+    .payment-item-heading{
+        width: 600px;
+        overflow: hidden;
+    }
+    .payment-item .payment-item-heading h2{
+        font-size: 5rem;
+        color: #0A814B;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .payment-item-heading h4{
+        font-size: 2.5rem;
+        padding: 5px 0;
+        
+    }
+    .payment-item-heading p{
+        font-size: 1.5rem;
+    }
+    footer .chinh_sach_cty{
+        width: 100vw;
+        background-color: var(--border);
+      }
+      footer .chinh_sach_cty .container{
+        display: flex;
+      
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 10px 0;
+      }
+      .chinh_sach_cty .cs_sub{
+        width: 250px;
+        display: flex;
+      }
+      .chinh_sach_cty h5{
+        font-size: 1.6rem;
+        color: #188755;
+      }
+      .chinh_sach_cty .cs_sub img{
+        width: 61px;
+        height: 61px;
+      }
+    
+    footer .container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+    footer h3{
+        font-size: 2rem ;
+        font-weight: bold;
+    }
+    footer .container p{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+    }
+   
+    #ttnh img{
+        order: 2;
+    }
+    .payment-item{
+        behavior: var(--smooth);
+    }
+</style>
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="background">
+                <div class="background-image">
+                </div>
+            </div>
+            <div class="head">
+                <a href="./home.html">
+                <div class="logo">
+
+                </div>
+            </a>
+                <div class="text">
+                    <h1>
+                        HƯỚNG DẪN THANH TOÁN
+                    </h1>
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="hero">
+            <div class="container">
+                <div class="list-info">
+                    <a href="#ttck">
+                        <div class="info">
+                            <div class="background">
+                                <div class="background-image ttck">
+
+                                </div>
+                            </div>
+                            <div class="info-title">
+                                <h3>Thanh toán chuyển khoản</h3>
+                            </div>
+                            <div class="line">
+                            </div>
+                            <div class="info-text">
+                                <p>Thanh toán chuyển khoảng qua ngân hàng bằng hình thức quét QR code rất an toàn.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#ttnh">
+                        <div class="info">
+                            <div class="background">
+                                <div class="background-image ttnh">
+
+                                </div>
+                            </div>
+                            <div class="info-title">
+                                <h3>Thanh toán chuyển khoản</h3>
+                            </div>
+                            <div class="line">
+                            </div>
+                            <div class="info-text">
+                                <p>Thanh toán chuyển khoảng qua ngân hàng bằng hình thức quét QR code rất an toàn.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#tttg">
+                        <div class="info">
+                            <div class="background">
+                                <div class="background-image tttg">
+
+                                </div>
+                            </div>
+                            <div class="info-title">
+                                <h3>Thanh toán chuyển khoản</h3>
+                            </div>
+                            <div class="line">
+                            </div>
+                            <div class="info-text">
+                                <p>Thanh toán chuyển khoảng qua ngân hàng bằng hình thức quét QR code rất an toàn.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+            </div>
+        </div>
+        <div class="container">
+        <section class="payment">
+            <div class="payment-item" id="ttck">
+                <img src="./assets/img/payment-qr.jpg" alt="">
+                <div class="payment-item-heading">
+                    <h2>Thanh toán chuyển khoản</h2>
+                    <h4>Quý khách có thể chuyển khoản hoặc Scan mã thanh toán QR code VietQR của MemoryZone do công ty cổ phần thanh toán Việt Nam NAPAS cung cấp.</h4>
+                    <br>
+                    <h4>VietQR là nhận diện thương hiệu chung cho các dịch vụ thanh toán, chuyển khoản bằng mã QR được xử lý qua mạng lưới Napas. Tiêu chuẩn cơ sở cho mã QR do Ngân hàng Nhà nước Việt Nam ban hành.</h4>
+                    <br>
+                    <p>Nội dung chuyển khoản theo cú pháp: <br>Mã đơn hàng  - Số điện thoại đặt hàng - Tên khách hàng </p>
+                </div>
+            </div>
+            <div class="payment-item" id="ttnh">
+                <img src="https://w.ladicdn.com/s950x700/619db9b6e23b1b0039e64fd1/asset-20-20230504041426-igalb.png" alt="">
+                <div class="payment-item-heading">
+                    <h2>Thanh toán khi nhận hàng</h2>
+                    <h4>Khi quý khách nhận hàng sẽ thanh toán trực tiếp với nhân viên hoặc đối tác giao hàng của MemoryZone. Thanh toán tổng giá trị đơn hàng hoặc phần còn lại (sau khi khách hàng đã đặt cọc trước) bằng tiền mặt.</h4>                    <br>
+                    <h4>Thanh toán COD áp dụng tất cả các Vùng miền / Tỉnh / Thành kể cả các hải đảo xa xôi như Hoàng Sa - Trường Sa của Việt Nam.</h4>                    <br>
+                <h4>Trong quá trình thanh toán COD có bất thường vui lòng gọi điện đến tổng đài 028 7301 3878 (bấm phím 3) sẽ có nhân viên vận hành hỗ trợ. </h4>                </div>
+            </div>
+            
+            <div class="payment-item" id="tttg">
+                <img src="https://w.ladicdn.com/s900x850/619db9b6e23b1b0039e64fd1/asset-21-20230504043939-uy0rj.png" alt="">
+                <div class="payment-item-heading">
+                    <h2>Thanh toán trả góp lãi suất 0%</h2>
+                    <h4>Trả góp 0% qua thẻ tín dụng (Credit Card) Visa, Master, JCB liên kết với 30 ngân hàng.</h4>                    <br>
+                    <h4>Phí chuyển đổi thấp nhất thị trường.</h4>                    <br>
+                    <h4>Hỗ trợ các kì hạn 3, 6, 9, 12 tháng.</h4>                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <div class="chinh_sach_cty">
+        <div class="container">
+            
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_1.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_2.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_3.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_4.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="gt">
+            <h3>GIỚI THIỆU</h3>
+            <p>Giới thiệu SpeedZ</p>
+            <p>Hệ thống cửa hàng</p>
+            <p>Điều khoảng giao dịch</p>
+            <p>Bảo mật thông tin</p>
+          </div>
+          <div class="cs">
+            <h3>CHÍNH SÁCH CÔNG TY</h3>
+            <p>Chính sách giao nhận</p>
+            <p>Chính sách đổi trả hàng</p>
+            <p>Chính sách bảo hành</p>
+            <p>Hướng dẫn trả góp</p>
+          </div>
+          <div class="ht">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <p>Mua hàng: 011 011 011 0</p>
+            <p>Bảo hành: 022 022 022 0</p>
+            <p>P.Kinh doanh: kd@speedz.com..vn</p>
+          </div>
+          <div class="ct">
+            <h3>CÔNG TY TNHH DỊCH VỤ TIN HỌC HỮU TÂN</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              eaque.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
