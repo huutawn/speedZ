@@ -20,6 +20,8 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet"
   />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+
   <link
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     rel="stylesheet"
@@ -27,17 +29,172 @@
     <title>Hỗ trợ | Chăm sóc khách hàng</title>
 </head>
 <style>
+    :root{
+        --green: #058e60;
+        --gray: #3f3d56;
+        --smooth: all .3s ease-in;
+        --border: #c6bdbdc9;
+    }
+    html{
+        font-size: 10px;
+        font-family: 'roboto';
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .background-logo{
+        background-color: var(--border);
+    }
+    .logo img{
+        width: 280px;
+        height: 80px;
+    }
+    .background{
+        position: relative;
+    }
+    .background-image img{
+        height: 300px;
+        width: 100%;
+    }
+    header .title,.text{
+        text-align: center;
+    }
+    header .title{
+        font-size: 5.5rem;
+        font-weight: bold;
+        position: absolute;
+        top: 100px;
+        transform: translate(-50%,-50%);
+        left: 50%;
+    }
+    header .text{
+        font-size: 2rem;
+        position: absolute;
+        top: 160px;
+        transform: translate(-50%,-50%);
+        left: 50%;
+    }
+    .list-searching{
+        display: flex;
+        justify-content: space-between;
+    }
+    #searching{
+        padding: 30px 0;
+        background-color: #ddf6e4;
+    }
+    .item{
+        width: 285px;
+        height: 350px;
+        background-color: #058e60;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .item img{
+        width: 200px;
+        height: 200px;
+    }
+    .item h2{
+        padding-top: 10px;
+        width: 200px;
+        font-size: 3.3rem;
+        text-align: center;
+        color: #fff;
+    }
+    .cskh-info{
+        padding: 30px 0;
+    }
+    .cskh-info-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    .cskh-info-item img{
+        width: 480px;
+        height: 480px;
+    }
+    .cskh-info-item-heading{
+        width: 600px;
+        overflow: hidden;
+    }
+    .cskh-info-item .cskh-info-item-heading h2{
+        font-size: 5rem;
+        color: #0A814B;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .cskh-info-item-heading h4{
+        font-size: 2.5rem;
+        padding: 5px 0;
+        
+    }
+    .cskh-info-item-heading p{
+        font-size: 1.5rem;
+    }
+    .cskh-info-item:nth-child(odd) img{
+        order: 2;
+    }
+    .cskh-info-item:nth-child(odd) .cskh-info-item-heading{
+        order: 1;
+    }
+    footer .chinh_sach_cty{
+        width: 100vw;
+        background-color: var(--border);
+      }
+      footer .chinh_sach_cty .container{
+        display: flex;
+      
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 10px 0;
+      }
+      .chinh_sach_cty .cs_sub{
+        width: 250px;
+        display: flex;
+      }
+      .chinh_sach_cty h5{
+        font-size: 1.6rem;
+        color: #188755;
+      }
+      .chinh_sach_cty .cs_sub img{
+        width: 61px;
+        height: 61px;
+      }
     
+    footer .container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+    footer h3{
+        font-size: 2rem ;
+        font-weight: bold;
+    }
+    footer .container p{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+    }
 </style>
 <body>
     <header>
+        <div class="background-logo">
         <div class="container">
+            <a href="./home.html">
             <div class="logo">
                 <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/logo.png?1722084183331" alt="">
             </div>
+            </a>
         </div>
+    </div>
         <div class="background">
             <div class="background-image">
+                <img src="https://hotro.sieutoc.com/web/image/website.s_cover_default_image" alt="">
                 <div class="container">
                     <div class="title"><h1>Trung tâm hỗ trợ khách hàng</h1></div>
                     <div class="text"><p>Bạn có thể tìm thấy sự hỗ trợ của chúng tôi ở đây, thông qua việc gửi cho chúng tôi những yêu cầu.</p></div>
@@ -45,5 +202,138 @@
             </div>
         </div>
     </header>
+    <main>
+        <section id="searching">
+            <div class="container">
+                <div class="list-searching">
+                    <a href="./yeu_cau_xuat_hoa_don.html">
+                    <div class="item">
+                        <img src="./assets/img/cskh_1.png" alt="">
+                        <h2>Gửi yêu cầu xuất hóa đơn</h2>
+                    </div>
+                </a>
+                <a href="./tra_cuu_hoa_don.html">
+                    <div class="item">
+                        <img src="./assets/img/cskh_2.png" alt="">
+                        <h2>Tra cứu thông tin hóa đơn</h2>
+                    </div>
+                </a>
+                <a href="./kiem_tra_hanh_trinh_don_hang.html">
+                    <div class="item">
+                        <img src="./assets/img/cskh_3.png" alt="">
+                        <h2>Tra cứu thông tin đơn hàng</h2>
+                    </div>
+                </a>
+                <a href="./ho_tro_ky_thuat.html">
+                    <div class="item">
+                        <img src="./assets/img/cskh_4.png" alt="">
+                        <h2>Gửi yêu cầu hỗ trợ kỹ thuật</h2>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </section>
+        <section class="cskh-info">
+            <div class="container">
+            <div class="cskh-info-item" id="yeu-cau-xuat-hoa-don">
+                <img src="./assets/img/cskh_1.png" alt="">
+                <div class="cskh-info-item-heading">
+                    <h2>GỬI YÊU CẦU XUẤT HÓA ĐƠN</h2>
+                    <h4>Mời bạn điền các thông tin về công ty của bạn, mã số thuế, email. Sau đó chúng tôi sẽ gửi hoá đơn qua email mà bạn đã cung cấp</h4>                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="cskh-info-item" id="tra-cuu-tt-hd">
+                <img src="./assets/img/cskh_2.png" alt="">
+                <div class="cskh-info-item-heading">
+                    <h2>TRA CỨU THÔNG TIN HÓA ĐƠN</h2>
+                    <h4>Nếu bạn cần tra cứu các thông tin liên quan hóa đơn VAT, hãy để lại thông tin, chúng tôi sẽ liên hệ lại</h4>                    <br>
+             </div>
+            </div>
+            
+            <div class="cskh-info-item" id="tra-cuu-tt-dh">
+                <img src="./assets/img/cskh_3.png" alt="">
+                <div class="cskh-info-item-heading">
+                    <h2>TRA CỨU HÀNH TRÌNH ĐƠN HÀNG</h2>
+                <h4>Nhập mã đơn hàng mà chúng tôi gửi cho bạn khi đặt hàng thành công, chúng tôi sẽ tìm kiếm hành trình đơn hàng cho bạn</h4>                                 </div>
+            </div>
+            <div class="cskh-info-item" id="doi-tra-hang">
+                <img src="./assets/img/cskh_4.png" alt="">
+                <div class="cskh-info-item-heading">
+                    <h2>YÊU CẦU HỖ TRỢ KỸ THUẬT</h2>
+                    <h4>Dành riêng cho khách hàng gửi bảo hành sản phẩm qua đường bưu điện , xin vui lòng điền các thông tin bảo hành sản phẩm ở mẫu này </h4>                    <br>
+                                   <br>
+                                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div class="chinh_sach_cty">
+        <div class="container">
+            
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_1.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_2.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_3.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_4.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="gt">
+            <h3>GIỚI THIỆU</h3>
+            <p>Giới thiệu SpeedZ</p>
+            <p>Hệ thống cửa hàng</p>
+            <p>Điều khoảng giao dịch</p>
+            <p>Bảo mật thông tin</p>
+          </div>
+          <div class="cs">
+            <h3>CHÍNH SÁCH CÔNG TY</h3>
+            <p>Chính sách giao nhận</p>
+            <p>Chính sách đổi trả hàng</p>
+            <p>Chính sách bảo hành</p>
+            <p>Hướng dẫn trả góp</p>
+          </div>
+          <div class="ht">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <p>Mua hàng: 011 011 011 0</p>
+            <p>Bảo hành: 022 022 022 0</p>
+            <p>P.Kinh doanh: kd@speedz.com..vn</p>
+          </div>
+          <div class="ct">
+            <h3>CÔNG TY TNHH DỊCH VỤ TIN HỌC HỮU TÂN</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              eaque.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

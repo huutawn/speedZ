@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --green: #058e60;
+        --gray: #3f3d56;
+        --smooth: all .3s ease-in;
+        --border: #c6bdbdc9;
+    }
+    html{
+        font-size: 10px;
+        font-family: 'roboto',sans-serif;
+    }
+    .logo img{
+        width: 280px;
+        height: 80px;
+    }
+    header{
+        background-color: var(--border);
+    }
+    .title{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .title h1{
+        font-weight: bold;
+        font-size: 5rem;
+        padding-bottom: 8px;
+    }
+    .title p{
+        font-size: 2rem;
+    }
+    .noi-mua-hang{
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+    b{
+        font-weight: bold;
+    }
+    .input-item{
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+    .input-item input{
+        margin: 12px 0;
+        height: 35px;
+        border-radius: 5px;
+    }
+    button{
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 1.7rem;
+        border: none;
+        background-color: #058e60;
+        color: #fff;
+        margin-left: 300px;
+    }
+    footer .chinh_sach_cty{
+        background-color: var(--border);
+      }
+      footer .chinh_sach_cty .container{
+        display: flex;
+      
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 10px 0;
+      }
+      .chinh_sach_cty .cs_sub{
+        width: 250px;
+        display: flex;
+      }
+      .chinh_sach_cty h5{
+        font-size: 1.6rem;
+        color: #188755;
+      }
+      .chinh_sach_cty .cs_sub img{
+        width: 61px;
+        height: 61px;
+      }
+    
+    footer .container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+    footer h3{
+        font-size: 2rem ;
+        font-weight: bold;
+    }
+    footer .container p{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+    }
+    
+</style>
+<body>
+    <header>
+        <div class="background">
+            <div class="container">
+                <div class="logo">
+                    <a href="./home.html"><img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/logo.png?1722084183331" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="title">
+            <h1>YÊU CẦU TRA CỨU THÔNG TIN HÓA ĐƠN</h1>
+        </section>
+        <div class="container">
+            <hr>
+           
+        </div>
+        <div class="container">
+            <div class="input-info">
+                <div class="input-item">
+                    <b>Mã đơn hàng *</b>
+                    <input type="text">
+                </div>
+                <div class="input-item">
+                    <b>Tên của bạn *</b>
+                    <input type="text">
+                </div>
+                <div class="input-item">
+                    <b>Email *</b>
+                    <input type="email">
+                </div>
+                <div class="input-item">
+                    <b>Số điện thoại*</b>
+                    <input type="phone">
+                </div>
+                <div class="input-item">
+                    <b>Yêu cầu khác</b>
+                    <input type="text">
+                </div>
+            </div>
+            <button type="button">Gửi thông tin</button>
+        </div>
+
+    </main>
+    <footer>
+        <div class="chinh_sach_cty">
+        <div class="container">
+            
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_1.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_2.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_3.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_4.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="gt">
+            <h3>GIỚI THIỆU</h3>
+            <p>Giới thiệu SpeedZ</p>
+            <p>Hệ thống cửa hàng</p>
+            <p>Điều khoảng giao dịch</p>
+            <p>Bảo mật thông tin</p>
+          </div>
+          <div class="cs">
+            <h3>CHÍNH SÁCH CÔNG TY</h3>
+            <p>Chính sách giao nhận</p>
+            <p>Chính sách đổi trả hàng</p>
+            <p>Chính sách bảo hành</p>
+            <p>Hướng dẫn trả góp</p>
+          </div>
+          <div class="ht">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <p>Mua hàng: 011 011 011 0</p>
+            <p>Bảo hành: 022 022 022 0</p>
+            <p>P.Kinh doanh: kd@speedz.com..vn</p>
+          </div>
+          <div class="ct">
+            <h3>CÔNG TY TNHH DỊCH VỤ TIN HỌC HỮU TÂN</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              eaque.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
