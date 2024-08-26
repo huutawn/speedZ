@@ -256,7 +256,7 @@ nav .cart_hover{
         background-color: #fff;
         width: 20%;
         left: 12%;
-        transform: translateY(-100%);
+        transform: translateY(-200%);
         height: 60%;
         top:120px;
     }

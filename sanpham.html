@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+    <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: #f9f9fb;
+  }
+  a{
+    color: #000;
+  }
+  .main-product{
+    display: flex;
+    margin-top: 30px;
+    padding-top: 10px;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  .main-product .image-product img{
+    width: 472px;
+    height: 472px;
+  }
+  .main-product .image-product p{
+    font-size: 1.5rem;
+  }
+  .main-product .info-product h2{
+    width: 680px;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  .main-product .info-product .evaluate{
+    color: #fec007;
+    font-size: 3rem;
+    padding: 10px 0;
+  }
+  .main-product .info-product p{
+    font-size: 1.5rem;
+  }
+  .main-product .info-product .price{
+    color: #0a804a;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  .main-product .info-product img{
+    width: 680px;
+    padding-top: 20px;
+  }
+  .quantity{
+    padding-top: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quantity p{
+    font-size: 1.5rem;
+  }
+  .quantity .count{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #c6bdbdc9;
+    font-size: 1.5rem;
+    border-radius: 5px;
+  }
+  .payment{
+    display: flex;
+    padding-top: 30px;
+  }
+  .payment .pay{
+    width: 450px;
+    height: 50px;
+    background-color: #0a804a;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .pay h2{
+    text-align: center;
+    padding-right: 250px;
+    padding-top: 6px;
+  }
+  .payment .add-to-cart{
+    width: 200px;
+    border: 1px solid #0a804a;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+  .payment .add-to-cart a{
+    text-align: center;
+    font-size: 2rem;
+    color: #0a804a;
+  }
+  .main-content{
+    display: flex;
+    margin-top: 30px;
+    padding-top: 10px;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 1px solid #e5e7eb;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #f9f6d1;
+  }
+  tr:nth-child(even) {
+    background-color: #e5e7eb;
+  }
+ .main-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .specifications{
+    height: 300px;
+    margin-left: 20px;
+    overflow: hidden;
+   
+  }
+  .specifications h2{
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .specifications button{
+    transform: translateY(-558px);
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: #e5e6ed;
+    color: #000;
+    background: linear-gradient(to bottom, white, #f0f0f0);
+    z-index: 10;
+  }
+  .product-title h3{
+    font-size: 2rem;
+    color: #0a804a;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  .product-title p{
+    font-size: 1.5rem;
+  }
+  .customer-evaluate{
+    padding-top: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+  }
+  .customer-evaluate h1{
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .point{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .point h2{
+    font-size: 2.5rem;
+  }
+  .point p{
+    font-size: 1.2rem;
+    padding-top: 20px;
+  }
+  .point h3{
+    font-size: 4rem;
+    color: red;
+    padding-top: 20px;
+  }
+  .evaluates{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .percent{
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  .percent-bar{
+    width: 400px;
+    height: 10px;
+    margin: 0 8px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+  }
+  .your-evaluate{
+    width: 210px;
+    height: 50px;
+    background-color: rgb(173, 71, 71);
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .overview-specification{
+    width: 500px;
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 11;
+    display: none;
+    border-radius: 10px;
+  }
+  .overview-specification h2{
+    font-size: 2rem;
+    padding: 20px 0;
+    background-color: #e5e6eb;
+  }
+  .overview{
+    height: 550px;
+    overflow: scroll;
+  }
+  .overlays{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ 50% */
+    opacity: 0.5; /* Cũng tạo độ mờ 50% */
+    z-index: 10;
+    display: none;
+  }
+  .overview-specification.overview_visible{
+    display: block;
+  }
+  .exit{
+    margin-left: 300px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  header .logo{
+    z-index: 120;
+    
+  }
+</style>
+<body>
+  <div class="overlays"></div>
+  <div class="overview-specification">
+    <h2>Thông số kỹ thuật <span class="exit"><i class='bx bx-x'></i></span></h2>
+    <div class="overview">
+    <table>
+      <tr>
+        <th>Nhà sản xuất</th>
+        <td>Lenovo</td>
+      </tr>
+      <tr>
+        <th>Model</th>
+        <td>82TS0060VN</td>
+      </tr>
+      <tr>
+        <th>Hệ điều hành</th>
+        <td>Win11</td>
+      </tr>
+      <tr>
+        <th>CPU</th>
+        <td>Intel Core i3-1215U (Up to 4.4Ghz) 6 Cores 8 Threads</td>
+      </tr>
+      <tr>
+        <th>Card VGA</th>
+        <td>Intel UHD Graphics</td>
+      </tr>
+      <tr>
+        <th>Memory</th>
+        <td>8GB (4GB onboard + 4GB SO-DIMM) DDR4 3200MHz,
+    <br>
+          1  slot Ram, nâng cấp tối đa tới 12GB</td>
+      </tr>
+      <tr>
+        <th>Ổ cứng</th>
+        <td>256GB SSD M.2 PCIe <br>
+          1 x slot HDD 2.5 inch SATA( không kèm sẵn cáp cần phải mua qua TTBH lenovo )</td>
+      </tr>
+      <tr>
+        <th>Bàn phím</th>
+        <td>Non-backlit keyboard, touch pad đa điểm</td>
+      </tr>
+      <tr>
+        <th>Màn hình</th>
+        <td>14" FHD (1920x1080) IPS 300nits Anti-glare</td>
+      </tr>
+      <tr>
+        <th>Lan</th>
+        <td>  100/1000M (RJ-45)</td>
+      </tr>
+      <tr>
+        <th>Màu sắc</th>
+        <td>Business Black</td>
+      </tr>
+      <tr>
+        <th>Cổng kết nối</th>
+        <td>1 x USB 2.0 <br>
+          1 x USB 3.2 Gen 1 <br>
+          1 x USB-C 3.2 Gen 1 (hỗ trợ data transfer, Power Delivery 3.0 and DisplayPort™ 1.2)
+          <br>1 x HDMI® 1.4b <br>
+          1 x Ethernet (RJ-45) <br>
+          1 x Headphone / microphone combo jack (3.5mm) <br>
+          1 x Power connector</td>
+      </tr>
+      <tr>
+        <th>Webcam	</th>
+        <td>	HD 720p with Privacy Shutter</td>
+      </tr>
+      <tr>
+        <th>Pin	</th>
+        <td>38Wh</td>
+      </tr>
+      <tr>
+        <th>Trọng lượng	</th>
+        <td>1.43kg</td>
+      </tr> 
+    
+    </table>
+  </div>
+  </div>
+  
+    <header class="header">
+        <nav>
+          <div>
+            <div class="container">
+              <div class="top_of_header">
+                <div class="logo">
+                  <a href="./home.html"><img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/logo.png?1722084183331" alt=""></a>
+                </div>
+  
+                <div class="search">
+                  <input
+                    type="text"
+                    id="search"
+                    autocomplete="off"
+                    placeholder="Bạn cần tìm gì?"
+                  />
+                  <button type="submit">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 192.904 192.904"
+                      width="18"
+                      height="18"
+                    >
+                      <path
+                        d="M190.707 180.101l-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 005.303 2.197 7.498 7.498 0 005.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="login">
+                  <img
+                    src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/account-icon.png?1720516324097"
+                    width="24"
+                    height="24"
+                    alt="account_icon"
+                    class="mr-1 align-self-center"
+                  />
+                  <a href="#">Đăng&nbsp;nhập</a>
+                </div>
+                <div class="cart_group">
+                  <div class="cart_hover">
+                    <img
+                      src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/cart-icon.png?1720787884145"
+                      width="24"
+                      height="24"
+                      alt="cart_icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="bot_menu">
+        <div class="container">
+          <div class="bot_of_header">
+            <ul class="list_bot_of_header">
+              <li><a href="./thanhToan.html">THANH TOÁN</a></li>
+              <li><a href="#">LIÊN HỆ</a></li>
+              <li><a href="./chamSocKhachHang.html">CHĂM SÓC KHÁCH HÀNG</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="container">
+            <div class="menu_bar">
+                <ul class="navbar_links">
+                 <a href="./home.html"><li class="navbar_link" id="first_child_menu">Home</li></a>
+                 <a href=""><li class="navbar_link" id="login">Tài khoản</li></a>
+                 <a href=""><li class="navbar_link" id="cart">Giỏ hàng</li></a>
+                 <a href="./chuot_banPhim_tainghe.html"><li class="navbar_link">Chuột-Bàn phím-Tai nghe</li></a>
+                 <a href="./laptop.html"><li class="navbar_link">Laptop</li></a>
+                 <a href="./pc_mb.html"><li class="navbar_link">PC/Máy bộ</li></a>
+                 <a href="./man_hinh.html"><li class="navbar_link">Màn hình</li></a>
+                 <a href="./linh_kien.html"><li class="navbar_link" id="last_child_menu">Linh kiện PC/laptop</li></a>
+                </ul>
+                <div class="menu_icons">
+                    <div class="menu_icon"></div>
+                </div>
+            </div>
+        </div>
+      </main>
+
+      <main class="main">
+        <div class="container">
+          <div class="main-product">
+            <div class="image-product">
+              <img src="./assets/img/laptop_lenovo.webp" alt="">
+              <p>CPU: i3-1215U (Up to 4.4Ghz) 6 Cores 8 Threads</p>
+              <p>VGA: UHD Graphics</p>
+              <p>Ram: 8GB DDR4 3200MHz</p>
+              <p>Ổ cứng: 256GB SSD M.2 PCIe</p>
+              <p>Màn hình: 14" FHD  IPS              </p>
+              <p>Bảo hành:1 năm</p>
+            </div>
+            <div class="info-product">
+              <h2>Laptop Lenovo V14 G3 IAP 82TS0060VN (i3-1215U, UHD Graphics, Ram 8GB DDR4, SSD 256GB, 14 Inch IPS FHD 60Hz)</h2>
+              <div class="evaluate">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+              </div>
+              <p>Thương hiệu: Lenovo  SKU: 82TS0060VN</p>
+              <div class="price">8.990.000đ</div>
+              <img src="./assets/img/image_info_product.png" alt="">
+              <div class="quantity">
+                <p>Số lượng: </p>
+                <div class="count">
+                  <i class='bx bx-minus'></i>
+                  <div class="number">1</div>
+                  <i class='bx bx-plus'></i>
+                </div>
+              </div>
+              <div class="payment">
+                <div class="pay">
+                  <a href=""><h2>Mua ngay</h2>
+                  <p>Giao hàng tận nơi hoặc nhận tại cửa hàng</p></a>
+                </div>
+                <div class="add-to-cart">
+                  <a href=""><i class='bx bxs-cart-alt' ></i>Thêm vào giỏ hàng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main>
+          <div class="container">
+            <div class="main-content">
+              <div class="product-title">
+                <h3>Đặc điểm nổi bật của Laptop Lenovo V14 G3 IAP 82TS0060VN</h3>
+                <p>Laptop Lenovo V14 G3 IAP 82TS0060VN mang tới cho bạn hiệu năng mạnh mẽ nhờ sự kết hợp bộ vi xử lý Intel Core thế hệ 12th, mang đến khả năng di động vượt trội hơn bao giờ hết.</p>
+                <img src="./assets/img/productt_title.webp" alt="">
+              </div>
+              <div class="specifications">
+                <h2>Thông số kỹ thuật</h2>
+
+<table>
+  <tr>
+    <th>Nhà sản xuất</th>
+    <td>Lenovo</td>
+  </tr>
+  <tr>
+    <th>Model</th>
+    <td>82TS0060VN</td>
+  </tr>
+  <tr>
+    <th>Hệ điều hành</th>
+    <td>Win11</td>
+  </tr>
+  <tr>
+    <th>CPU</th>
+    <td>Intel Core i3-1215U (Up to 4.4Ghz) 6 Cores 8 Threads</td>
+  </tr>
+  <tr>
+    <th>Card VGA</th>
+    <td>Intel UHD Graphics</td>
+  </tr>
+  <tr>
+    <th>Memory</th>
+    <td>8GB (4GB onboard + 4GB SO-DIMM) DDR4 3200MHz,
+<br>
+      1  slot Ram, nâng cấp tối đa tới 12GB</td>
+  </tr>
+  <tr>
+    <th>Ổ cứng</th>
+    <td>256GB SSD M.2 PCIe <br>
+      1 x slot HDD 2.5 inch SATA( không kèm sẵn cáp cần phải mua qua TTBH lenovo )</td>
+  </tr>
+  <tr>
+    <th>Bàn phím</th>
+    <td>Non-backlit keyboard, touch pad đa điểm</td>
+  </tr>
+  <tr>
+    <th>Màn hình</th>
+    <td>14" FHD (1920x1080) IPS 300nits Anti-glare</td>
+  </tr>
+  <tr>
+    <th>Lan</th>
+    <td>  100/1000M (RJ-45)</td>
+  </tr>
+  <tr>
+    <th>Màu sắc</th>
+    <td>Business Black</td>
+  </tr>
+  <tr>
+    <th>Cổng kết nối</th>
+    <td>1 x USB 2.0 <br>
+      1 x USB 3.2 Gen 1 <br>
+      1 x USB-C 3.2 Gen 1 (hỗ trợ data transfer, Power Delivery 3.0 and DisplayPort™ 1.2)
+      <br>1 x HDMI® 1.4b <br>
+      1 x Ethernet (RJ-45) <br>
+      1 x Headphone / microphone combo jack (3.5mm) <br>
+      1 x Power connector</td>
+  </tr>
+  <tr>
+    <th>Webcam	</th>
+    <td>	HD 720p with Privacy Shutter</td>
+  </tr>
+  <tr>
+    <th>Pin	</th>
+    <td>38Wh</td>
+  </tr>
+  <tr>
+    <th>Trọng lượng	</th>
+    <td>1.43kg</td>
+  </tr> 
+</table>
+
+<button class="specification-button">Xem thêm</button>
+              </div>
+            </div>
+          </div>
+      </main>
+      <main>
+        <div class="container">
+          <div class="customer-evaluate">
+            <h1>ĐÁNH GIÁ SẢN PHẨM
+            </h1>
+            <div class="evaluates">
+              <div class="point">
+                <h2>KHÁCH HÀNG NHẬN XÉT</h2>
+                <p>đánh giá trung bình</p>
+                <h3>5/5</h3>
+              </div>
+              <div class="percents">
+                <div class="percent">5★ <div class="percent-bar"></div>100%</div>
+                <div class="percent">4★ <div class="percent-bar"></div>0</div>
+                <div class="percent">3★ <div class="percent-bar"></div>0</div>
+                <div class="percent">2★ <div class="percent-bar"></div>0</div>
+                <div class="percent">1★ <div class="percent-bar"></div>0</div>
+              </div>
+              <div class="your-evaluate">
+                Viết đánh giá của bạn
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="chinh_sach_cty">
+        <div class="container">
+            
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_1.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_2.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_3.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+              <div class="cs_sub">
+                <img src="//bizweb.dktcdn.net/100/329/122/themes/951253/assets/service_4.png?1722172143611" alt="">
+                <div class="title">
+                  <h5>Dịch vụ giao hàng Siêu Tốc 2H</h5>
+                  <p>Giao hàng trong nội thành HCM & Hà Nội nhanh chóng trong vòng 2H</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="gt">
+            <h3>GIỚI THIỆU</h3>
+            <p>Giới thiệu SpeedZ</p>
+            <p>Hệ thống cửa hàng</p>
+            <p>Điều khoảng giao dịch</p>
+            <p>Bảo mật thông tin</p>
+          </div>
+          <div class="cs">
+            <h3>CHÍNH SÁCH CÔNG TY</h3>
+            <p>Chính sách giao nhận</p>
+            <p>Chính sách đổi trả hàng</p>
+            <p>Chính sách bảo hành</p>
+            <p>Hướng dẫn trả góp</p>
+          </div>
+          <div class="ht">
+            <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+            <p>Mua hàng: 011 011 011 0</p>
+            <p>Bảo hành: 022 022 022 0</p>
+            <p>P.Kinh doanh: kd@speedz.com..vn</p>
+          </div>
+          <div class="ct">
+            <h3>CÔNG TY TNHH DỊCH VỤ TIN HỌC HỮU TÂN</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+              eaque.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+<script>
+    const input = document.getElementById('search')
+
+
+
+// menu button
+const menu = document.querySelector('.navbar_links')
+const menuButton =document.querySelector('.menu_icons')
+
+menuButton.addEventListener('click', ()=>{
+  menu.classList.toggle("navbar_open")
+  menuButton.classList.toggle("open")
+})
+
+
+//header
+const header = document.querySelector('.header')
+const offSet = 350
+if(window.scrollY==0&&window.innerWidth>992)menuButton.style.display='none'
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>offSet){
+    header.classList.add('fixed')
+    menuButton.style.display = 'block'
+  }
+  else{
+    header.classList.remove('fixed')
+    menuButton.style.display = 'none'
+  }
+})
+
+
+//overview
+const specificationsButton = document.querySelector('.specification-button')
+const overviewSpecification = document.querySelector('.overview-specification')
+let overlays = document.querySelector('.overlays')
+let exit = document.querySelector('.exit')
+specificationsButton.addEventListener('click',()=>{
+  overviewSpecification.classList.toggle('overview_visible')
+  overlays.style.display = 'block'
+})
+overlays.addEventListener('click',()=>{
+  overviewSpecification.classList.toggle('overview_visible')
+  overlays.style.display = 'none'
+})
+exit.addEventListener('click',()=>{
+  overviewSpecification.classList.toggle('overview_visible')
+  overlays.style.display = 'none'
+})
+</script>
+</html>
