@@ -455,6 +455,7 @@ main{
 .card_product .list_card{
     margin-top: 20px;
     display: flex;
+    justify-content: space-between;
 }
 .list_card .card{
     width: 21.5rem;
