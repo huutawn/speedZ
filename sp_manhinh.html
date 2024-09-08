@@ -26,7 +26,7 @@
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     rel="stylesheet"
   />
-    <title>Document</title>
+    <title>MemoryZone | Màn hình</title>
 </head>
 <style>
   body{
@@ -483,9 +483,9 @@
               <div class="quantity">
                 <p>Số lượng: </p>
                 <div class="count">
-                  <i class='bx bx-minus'></i>
-                  <div class="number">1</div>
-                  <i class='bx bx-plus'></i>
+                  <i class='bx bx-minus' id="minus"></i>
+                  <div class="number" id="number">1</div>
+                  <i class='bx bx-plus' id="plus"></i>
                 </div>
               </div>
               <div class="payment">
@@ -730,5 +730,31 @@ exit.addEventListener('click',()=>{
   overviewSpecification.classList.toggle('overview_visible')
   overlays.style.display = 'none'
 })
+
+//counting
+const minusBtn = document.getElementById('minus')
+const numberDisplay = document.getElementById('number')
+const plusBtn = document.getElementById('plus')
+let count = 0;
+
+// Cập nhật hiển thị số
+function updateCount() {
+  numberDisplay.textContent = count;
+}
+
+// Sự kiện khi nhấn nút trừ
+minusBtn.addEventListener('click', () => {
+  if (count > 1) {
+    count--;
+    updateCount();
+  }
+});
+
+// Sự kiện khi nhấn nút cộng
+plusBtn.addEventListener('click', () => {
+  count++;
+  updateCount();
+});
+
 </script>
 </html>
